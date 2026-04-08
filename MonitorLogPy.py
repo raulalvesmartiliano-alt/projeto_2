@@ -58,23 +58,10 @@ def gerarDataHora(i):
 
 # Retorna um IP — nas linhas 20 a 30 sempre o mesmo IP para simular força bruta
 def gerarIp(i):
-    r = random.randint(1, 6)
-
-    if i >= 20 and i <= 30:
-        return '200.0.111.45'
-
-    if r == 1:
-        return '192.168.5.6'
-    if r == 2:
-        return '192.168.5.8'
-    if r == 3:
-        return '192.168.5.9'
-    if r == 4:
-        return '192.168.25.8'
-    if r == 5:
-        return '192.168.45.8'
+    if i >= 20 and i <= 50:
+        return "203.120.45.7"
     else:
-        return '192.168.65.68'
+        return f"{random.randint(10,200)}.{random.randint(10,200)}.{random.randint(10,200)}.{random.randint(10,200)}"
 
 # Retorna a página acessada — faixas específicas forçam os cenários obrigatórios
 def gerarRecurso(i):
